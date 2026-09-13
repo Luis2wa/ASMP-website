@@ -1,23 +1,32 @@
 (function () {
+
   "use strict";
 
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* YEAR */
+
   var yearEl = document.getElementById("year");
+
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   /* MISSING IMAGES → show archive placeholders */
+
   document.querySelectorAll("img").forEach(function (img) {
+
     img.addEventListener("error", function () {
+
       img.classList.add("is-missing");
 
       if (img.parentElement) {
-        img.parentElement.classList.add("has-missing-media");
-      }
-    });
-  });
 
+        img.parentElement.classList.add("has-missing-media");
+
+      }
+
+    });
+
+  });
   /* DUST */
   var dust = document.getElementById("dust-field");
 
