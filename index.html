@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ASMP — arquivo industrial, wiki técnica e portal oficial do servidor Minecraft e modpack customizado.">
+  <title>ASMP // Arquivo Industrial</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Share+Tech+Mono&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- DISCORD FLUTUANTE -->
+<a
+  href="https://discord.gg/WgXT2hDwW9"
+  class="discord-float"
+  id="discord-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Entrar no Discord do ASMP"
+>
+  <img
+    src="assets/discord.png"
+    alt="Discord"
+  >
+</a>
+<body>
+  <a class="skip-link" href="#home">Pular para o conteúdo</a>
+
+  <!-- ATMOSPHERE -->
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__grain"></div>
+    <div class="atmosphere__blueprint"></div>
+    <div class="atmosphere__haze"></div>
+    <div class="steam steam--a"></div>
+    <div class="steam steam--b"></div>
+    <div class="steam steam--c"></div>
+    <div class="dust" id="dust-field"></div>
+  </div>
+
+  <!-- INDUSTRIAL PIPES -->
+  <div class="pipe-system" aria-hidden="true">
+    <div class="pipe pipe--left">
+      <span class="pipe__joint pipe__joint--top"></span>
+      <span class="pipe__valve"></span>
+      <span class="pipe__bolt pipe__bolt--1"></span>
+      <span class="pipe__bolt pipe__bolt--2"></span>
+      <span class="pipe__joint pipe__joint--mid"></span>
+      <span class="pipe__vent"></span>
+      <span class="pipe__joint pipe__joint--bot"></span>
+    </div>
+    <div class="pipe pipe--right">
+      <span class="pipe__joint pipe__joint--top"></span>
+      <span class="pipe__valve pipe__valve--alt"></span>
+      <span class="pipe__bolt pipe__bolt--1"></span>
+      <span class="pipe__bolt pipe__bolt--2"></span>
+      <span class="pipe__joint pipe__joint--mid"></span>
+      <span class="pipe__vent"></span>
+      <span class="pipe__joint pipe__joint--bot"></span>
+    </div>
+    <div class="pipe pipe--top">
+      <span class="pipe__elbow pipe__elbow--l"></span>
+      <span class="pipe__elbow pipe__elbow--r"></span>
+    </div>
+    <div class="gear gear--nav-left"></div>
+    <div class="gear gear--nav-right gear--ccw"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="nav__brand" href="#home">
+        <img src="assets/logo.png" alt="ASMP" width="48" height="48">
+        <span class="nav__brand-text">
+          <strong>ASMP</strong>
+          <small>ARQUIVO INDUSTRIAL</small>
+        </span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link is-active" href="#home">Início</a></li>
+        <li><a class="nav__link" href="#wiki">Wiki</a></li>
+        <li><a class="nav__link" href="#players">Jogadores</a></li>
+        <li><a class="nav__link" href="#download">Download</a></li>
+      </ul>
+
+      <p class="nav__serial">CTRL-PNL // 04</p>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" data-section="home">
+    <div class="section hero">
+      <div class="section__inner">
+        <p class="stamp">ASMP INDUSTRIAL ARCHIVE · DOC. 001</p>
+
+        <div class="hero__grid">
+          <div class="hero__copy reveal">
+            <p class="kicker">Servidor · Modpack · Arquivo técnico</p>
+            <h1>ASMP</h1>
+            <p class="hero__subtitle">Um servidor movido pela indústria.</p>
+            <p class="hero__lead">
+              ASMP é um servidor de Minecraft com um modpack próprio. No nosso servidor, o progresso é movido pelas máquinas,
+              vapor, extração e linhas de produção — não por atalhos. Qualquer canto do mundo pode ser um chão de fábrica
+              aberto à exploração, com sistemas que se unem em conjunto a uma comunidade.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#download">Acessar distribuição</a>
+              <a class="btn btn--ghost" href="#wiki">Abrir arquivo técnico</a>
+            </div>
+          </div>
+
+          <aside class="hero__aside reveal">
+            <figure class="logo-frame">
+              <span class="screw screw--tl"></span>
+              <span class="screw screw--tr"></span>
+              <span class="screw screw--bl"></span>
+              <span class="screw screw--br"></span>
+              <img src="assets/logo-bg.png" alt="Emblema ASMP com fundo de planta industrial" width="640" height="640">
+              <figcaption class="logo-frame__cap">EMBLEMA OFICIAL · PLACA 01</figcaption>
+            </figure>
+
+            <!-- Edit these values directly -->
+            <dl class="meta-panel">
+              <div><dt>PROJECT</dt><dd>ASMP</dd></div>
+              <div><dt>TYPE</dt><dd>Minecraft Server</dd></div>
+              <div><dt>CREATION DATE</dt><dd><!-- EDIT -->2025-04-08</dd></div>
+              <div><dt>CREATED BY</dt><dd><!-- EDIT -->ASMP Team</dd></div>
+              <div><dt>CURRENT VERSION</dt><dd><!-- EDIT -->3.0.0</dd></div>
+              <div><dt>MODPACK</dt><dd><!-- EDIT -->NeoASMP</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <!-- SERVER STATUS -->
+        <div class="status-panel reveal" role="status" aria-live="polite">
+          <header class="status-panel__head">
+            <span class="lamp lamp--live" title="Sistema ativo"></span>
+            <h2>ASMP // SYSTEM STATUS</h2>
+            <span class="status-panel__id">MON-07</span>
+          </header>
+          <ul class="status-panel__grid">
+            <li>
+              <span>SERVER</span>
+              <strong><i class="dot dot--online" aria-hidden="true"></i> ONLINE</strong>
+            </li>
+            <li>
+              <span>VERSION</span>
+              <strong><!-- EDIT -->1.21.1</strong>
+            </li>
+            <li>
+              <span>MODPACK</span>
+              <strong><!-- EDIT -->NeoASMP</strong>
+            </li>
+            <li>
+              <span>PLAYERS</span>
+              <strong><!-- EDIT -->12</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERSION HISTORY -->
+    <section class="section history" id="history" aria-labelledby="history-title">
+      <div class="section__inner">
+        <header class="section-head reveal">
+          <p class="stamp">TECHNICAL RECORD · SEQ. 003</p>
+          <h2 id="history-title">ASMP // HISTÓRICO</h2>
+          <p>Linha do tempo das versões registradas do servidor.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__node" aria-hidden="true"></div>
+            <figure class="record-image">
+              <img src="assets/versions/v1.png" alt="Emblema da versão 0.1 Fundação" loading="lazy" width="640" height="640">
+              <div class="media-fallback">
+                <span>FIG. 01</span>
+                <strong>ARQUIVO VISUAL PENDENTE</strong>
+                <small>assets/versions/v1.png</small>
+              </div>
+            </figure>
+            <article class="record-card">
+              <p class="record-card__meta">VERSÃO 0.1 · <!-- EDIT -->08 ABR 2025</p>
+              <h3>ASMP I</h3>
+              <p>A primeira versão do servidor, foi um servidor fechado, apenas para a turma, era focado em ser vanilla e ter a junção de Bedrock com Java.</p>
+              <ul>
+                <li>O começo de tudo.</li>
+                <li>Integração com Bedrock e Java.</li>
+                <li>Deu origem ao ASMP.</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline__item timeline__item--right reveal">
+            <div class="timeline__node" aria-hidden="true"></div>
+            <article class="record-card">
+              <p class="record-card__meta">VERSÃO 0.2 · <!-- EDIT -->25 FEV 2026</p>
+              <h3>ASMP II</h3>
+              <p>A segunda versão do servidor, era um pouco mais aberto e também tinha junção de Bedrock com Java.</p>
+              <ul>
+                <li>Era um servidor mais aberto.</li>
+                <li>Integração com Bedrock e Java.</li>
+                <li>Bases conjuntas em uma vila.</li>
+              </ul>
+            </article>
+            <figure class="record-image">
+              <img src="assets/versions/v2.png" alt="Emblema da versão 0.2 Linha de produção" loading="lazy" width="640" height="640">
+              <div class="media-fallback">
+                <span>FIG. 02</span>
+                <strong>ARQUIVO VISUAL PENDENTE</strong>
+                <small>assets/versions/v2.png</small>
+              </div>
+            </figure>
+          </li>
+
+          <li class="timeline__item timeline__item--left reveal">
+            <div class="timeline__node" aria-hidden="true"></div>
+            <figure class="record-image">
+              <img src="assets/versions/v3.png" alt="Emblema da versão 0.3 Rede de vapor" loading="lazy" width="640" height="640">
+              <div class="media-fallback">
+                <span>FIG. 03</span>
+                <strong>ARQUIVO VISUAL PENDENTE</strong>
+                <small>assets/versions/v3.png</small>
+              </div>
+            </figure>
+            <article class="record-card">
+              <p class="record-card__meta">VERSÃO 0.3 · <!-- EDIT -->02 FEV 2025</p>
+              <h3>ASMP III</h3>
+              <p>A atual versão do servidor, apenas em Java, focado em industrialização com um modpack próprio.</p>
+              <ul>
+                <li>Totalmente aberto.</li>
+                <li>Modpack próprio.</li>
+                <li>Atual servidor.</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="section news" id="news" aria-labelledby="news-title">
+      <div class="section__inner">
+        <header class="section-head reveal">
+          <p class="stamp">PRESS BULLETIN · ED. 014</p>
+          <h2 id="news-title">ASMP // MACHINES</h2>
+          <p>Uso em prática de máquinas e sistemas do modpack.</p>
+        </header>
+
+        <div class="news-grid">
+          <article class="news-card reveal" data-category="MODPACK">
+            <figure class="news-card__media">
+              <img src="assets/news/n1.png" alt="Sistema ME do Applied Energistics 2" loading="lazy" width="480" height="280">
+              <div class="media-fallback">
+                <span>AE2</span>
+                <small>assets/news/n1.png</small>
+              </div>
+              <span class="tag">ARMAZENAMENTO</span>
+            </figure>
+            <div class="news-card__body">
+              <p class="news-card__theme">ME STORAGE &amp; AUTOMATION</p>
+              <h3>Applied Energistics 2</h3>
+              <p>Rede ME para guardar itens em discos, mover carga pelos canais e montar receitas nos terminais. O depósito vira um sistema, não um baú.</p>
+            </div>
+          </article>
+
+          <article class="news-card reveal" data-category="MODPACK">
+            <figure class="news-card__media">
+              <img src="assets/news/n2.png" alt="Linha mecânica do Create" loading="lazy" width="480" height="280">
+              <div class="media-fallback">
+                <span>CRT</span>
+                <small>assets/news/n2.png</small>
+              </div>
+              <span class="tag tag--news">MÁQUINAS</span>
+            </figure>
+            <div class="news-card__body">
+              <p class="news-card__theme">MECHANICAL INDUSTRY</p>
+              <h3>Create</h3>
+              <p>Eixos, engrenagens e correias levam rotação pela fábrica. A linha cresce peça a peça até a produção andar sozinha.</p>
+            </div>
+          </article>
+
+          <article class="news-card reveal" data-category="MODPACK">
+            <figure class="news-card__media">
+              <img src="assets/news/n3.png" alt="Cadeia industrial do Modern Industrialization" loading="lazy" width="480" height="280">
+              <div class="media-fallback">
+                <span>MI</span>
+                <small>assets/news/n3.png</small>
+              </div>
+              <span class="tag tag--mod">PRODUÇÃO</span>
+            </figure>
+            <div class="news-card__body">
+              <p class="news-card__theme">INDUSTRIAL PRODUCTION</p>
+              <h3>Modern Industrialization</h3>
+              <p>Máquinas a vapor e elétricas em cadeia: minério entra, peça sai. Tubos e cabos ligam o pátio em escala de fábrica.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    </section>
+
+    <!-- WIKI -->
+    <section class="section wiki" id="wiki" data-section="wiki" aria-labelledby="wiki-title">
+      <div class="section__inner">
+        <header class="section-head reveal">
+          <p class="stamp">TECHNICAL ARCHIVE · DRAWER B</p>
+          <h2 id="wiki-title">ASMP // TECHNICAL ARCHIVE</h2>
+          <p>Manual técnico do NeoASMP. A busca filtra as fichas abaixo no próprio navegador.</p>
+        </header>
+
+        <form class="wiki-search reveal" role="search" onsubmit="return false;">
+          <label for="wiki-query">Buscar no arquivo</label>
+          <div class="wiki-search__field">
+            <span aria-hidden="true">⌕</span>
+            <input id="wiki-query" name="q" type="search" placeholder="mods, máquinas, vapor, guias…" autocomplete="off" aria-describedby="wiki-count">
+            <button type="button" id="wiki-clear" hidden>Limpar</button>
+          </div>
+          <p class="wiki-search__hint" id="wiki-count"></p>
+        </form>
+
+        <div class="wiki-grid" id="wiki-grid">
+          <!-- Add more cards with data-keys for search -->
+      
+          <article class="wiki-card reveal" data-keys="Accessories acessórios equipamento slots">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">EQUIPAMENTO</p>
+              <h3>Accessories</h3>
+              <p>Adiciona espaços extras para equipamentos e acessórios usados por outros sistemas do modpack.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Accurate BlockPlacement blocos construção posicionamento">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>Accurate BlockPlacement</h3>
+              <p>Melhora o posicionamento de blocos, deixando a construção mais previsível e precisa.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Alternate Current redstone otimização desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">⌁</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Alternate Current</h3>
+              <p>Otimiza o processamento de redstone para reduzir o custo de grandes circuitos e máquinas.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Apotheosis encantamentos equipamentos loot">
+              <div class="wiki-card__icon" aria-hidden="true">✦</div>
+              <p class="wiki-card__code">PROGRESSÃO</p>
+              <h3>Apotheosis</h3>
+              <p>Expande sistemas de encantamento, equipamentos, loot e progressão para o fim de jogo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Apothic Attributes atributos equipamentos combate">
+              <div class="wiki-card__icon" aria-hidden="true">◆</div>
+              <p class="wiki-card__code">COMBATE</p>
+              <h3>Apothic Attributes</h3>
+              <p>Amplia os atributos disponíveis para equipamentos, personagens e sistemas de combate.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Apothic Enchanting encantamento mesa">
+              <div class="wiki-card__icon" aria-hidden="true">✧</div>
+              <p class="wiki-card__code">PROGRESSÃO</p>
+              <h3>Apothic Enchanting</h3>
+              <p>Expande o sistema de encantamentos e oferece novas possibilidades para melhorar equipamentos.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Apothic Spawners spawner mobs">
+              <div class="wiki-card__icon" aria-hidden="true">◎</div>
+              <p class="wiki-card__code">MOBS</p>
+              <h3>Apothic Spawners</h3>
+              <p>Adiciona opções para modificar e controlar spawners de criaturas.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="AppleSkin comida fome saturação">
+              <div class="wiki-card__icon" aria-hidden="true">◉</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>AppleSkin</h3>
+              <p>Mostra informações extras sobre fome e saturação dos alimentos diretamente na interface.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Applied Energistics 2 AE2 armazenamento autocrafting canais rede">
+              <div class="wiki-card__icon" aria-hidden="true">⬡</div>
+              <p class="wiki-card__code">ARMAZENAMENTO</p>
+              <h3>Applied Energistics 2</h3>
+              <p>Cria redes de armazenamento, terminais, automação e autocrafting para organizar grandes quantidades de itens.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Better End end dimensão biomas exploração">
+              <div class="wiki-card__icon" aria-hidden="true">◈</div>
+              <p class="wiki-card__code">MUNDO</p>
+              <h3>Better End</h3>
+              <p>Expande o End com novos biomas, blocos, estruturas, criaturas e recursos para exploração.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Better Furnaces Reforged fornalha fundição">
+              <div class="wiki-card__icon" aria-hidden="true">▤</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>Better Furnaces Reforged</h3>
+              <p>Adiciona fornalhas aprimoradas para acelerar e melhorar o processamento de materiais.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Better Nether nether dimensão biomas exploração">
+              <div class="wiki-card__icon" aria-hidden="true">◉</div>
+              <p class="wiki-card__code">MUNDO</p>
+              <h3>Better Nether</h3>
+              <p>Reformula o Nether com novos biomas, recursos, criaturas e locais para explorar.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Better Ping Display ping latência ms">
+              <div class="wiki-card__icon" aria-hidden="true">⌁</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Better Ping Display</h3>
+              <p>Exibe a latência do jogador de forma mais clara durante a partida.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Better ScreenShots screenshots captura imagem">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>Better ScreenShots</h3>
+              <p>Melhora o sistema de captura de tela e facilita o registro de momentos do servidor.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Better Search busca pesquisa interface">
+              <div class="wiki-card__icon" aria-hidden="true">⌕</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Better Search</h3>
+              <p>Melhora a busca por itens e informações dentro das interfaces do jogo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="BetterF3 F3 HUD informações interface">
+              <div class="wiki-card__icon" aria-hidden="true">F3</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>BetterF3</h3>
+              <p>Reorganiza a tela F3 para deixar as informações técnicas mais legíveis e organizadas.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Biomes O Plenty biomas mundo exploração natureza">
+              <div class="wiki-card__icon" aria-hidden="true">❖</div>
+              <p class="wiki-card__code">MUNDO</p>
+              <h3>Biomes O' Plenty</h3>
+              <p>Adiciona uma grande variedade de biomas, plantas, blocos e ambientes para explorar.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Block Pack blocos construção decoração">
+              <div class="wiki-card__icon" aria-hidden="true">▦</div>
+              <p class="wiki-card__code">CONSTRUÇÃO</p>
+              <h3>Block Pack</h3>
+              <p>Adiciona um conjunto extra de blocos para construção e decoração.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Bridging Mod bridge construção blocos">
+              <div class="wiki-card__icon" aria-hidden="true">╋</div>
+              <p class="wiki-card__code">CONSTRUÇÃO</p>
+              <h3>Bridging Mod</h3>
+              <p>Facilita a colocação contínua de blocos durante construções e pontes.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Carry On carregar blocos entidades">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>Carry On</h3>
+              <p>Permite carregar determinados blocos e entidades para facilitar transporte e organização.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Chat Heads chat mensagens jogadores">
+              <div class="wiki-card__icon" aria-hidden="true">◌</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>Chat Heads</h3>
+              <p>Mostra o rosto dos jogadores junto às mensagens do chat.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Cherished Worlds mundos favoritos salvar">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>Cherished Worlds</h3>
+              <p>Permite marcar mundos como favoritos e organizar melhor a lista de saves.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Comforts sleeping bag hammock cama dormir">
+              <div class="wiki-card__icon" aria-hidden="true">⌂</div>
+              <p class="wiki-card__code">SOBREVIVÊNCIA</p>
+              <h3>Comforts</h3>
+              <p>Adiciona sacos de dormir e redes para descansar sem precisar colocar uma cama permanente.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Continuity connected textures texturas visual">
+              <div class="wiki-card__icon" aria-hidden="true">▥</div>
+              <p class="wiki-card__code">VISUAL</p>
+              <h3>Continuity</h3>
+              <p>Adiciona recursos visuais como texturas conectadas para melhorar a aparência dos blocos.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Controlling controles keybinds teclas">
+              <div class="wiki-card__icon" aria-hidden="true">⌨</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Controlling</h3>
+              <p>Melhora a tela de controles e facilita encontrar e organizar atalhos do jogo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Corpse morte corpo itens inventário">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">SOBREVIVÊNCIA</p>
+              <h3>Corpse</h3>
+              <p>Cria um corpo no local da morte para armazenar os itens do jogador até o resgate.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Cosmetica cosmetics cosméticos visual personagem">
+              <div class="wiki-card__icon" aria-hidden="true">✦</div>
+              <p class="wiki-card__code">COSMÉTICOS</p>
+              <h3>Cosmetica</h3>
+              <p>Adiciona recursos cosméticos para personalizar a aparência do jogador.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="CraftPresence discord status presença">
+              <div class="wiki-card__icon" aria-hidden="true">◉</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>CraftPresence</h3>
+              <p>Integra informações da sessão do Minecraft à presença do jogador no Discord.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Create máquinas engrenagens correias automação mecânica">
+              <div class="wiki-card__icon" aria-hidden="true">⚙</div>
+              <p class="wiki-card__code">INDÚSTRIA</p>
+              <h3>Create</h3>
+              <p>Constrói sistemas mecânicos usando engrenagens, eixos, correias, máquinas e linhas de produção.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Create Contraption Terminals Create terminal armazenamento">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">INDÚSTRIA</p>
+              <h3>Create Contraption Terminals</h3>
+              <p>Adiciona terminais para interagir de forma mais prática com contraptions e sistemas do Create.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="CreateBetterFps Create desempenho otimização">
+              <div class="wiki-card__icon" aria-hidden="true">⌁</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>CreateBetterFps</h3>
+              <p>Otimiza o desempenho de contraptions e sistemas do Create em construções mais pesadas.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Critters and Companions criaturas animais mobs">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">CRIATURAS</p>
+              <h3>Critters and Companions</h3>
+              <p>Adiciona novas criaturas e pequenos animais para deixar o mundo mais vivo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Crop Critters agricultura plantações animais">
+              <div class="wiki-card__icon" aria-hidden="true">❖</div>
+              <p class="wiki-card__code">AGRICULTURA</p>
+              <h3>Crop Critters</h3>
+              <p>Adiciona criaturas relacionadas às plantações e amplia a interação com a agricultura.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Dynamic FPS fps desempenho otimização">
+              <div class="wiki-card__icon" aria-hidden="true">↯</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Dynamic FPS</h3>
+              <p>Reduz o uso de recursos quando o jogo está em segundo plano ou sem atividade.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Easy Disenchanting encantamento item">
+              <div class="wiki-card__icon" aria-hidden="true">✧</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>Easy Disenchanting</h3>
+              <p>Facilita a remoção de encantamentos de equipamentos e itens.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="ElevatorMod elevador transporte vertical">
+              <div class="wiki-card__icon" aria-hidden="true">⇅</div>
+              <p class="wiki-card__code">CONSTRUÇÃO</p>
+              <h3>ElevatorMod</h3>
+              <p>Adiciona elevadores simples para movimentação rápida entre diferentes andares.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Enhanced Block Entities Reloaded EBE blocos desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">▥</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Enhanced Block Entities Reloaded</h3>
+              <p>Otimiza a renderização de block entities para reduzir o impacto visual no desempenho.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="EntityCulling entidades culling desempenho fps">
+              <div class="wiki-card__icon" aria-hidden="true">◌</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>EntityCulling</h3>
+              <p>Evita renderizar entidades que estão escondidas da câmera, ajudando no desempenho.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Extended Industrialization indústria máquinas produção energia">
+              <div class="wiki-card__icon" aria-hidden="true">⚙</div>
+              <p class="wiki-card__code">INDÚSTRIA</p>
+              <h3>Extended Industrialization</h3>
+              <p>Expande a progressão industrial com novas máquinas, processos e etapas de produção.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Farmer's Delight agricultura comida cozinha fazenda">
+              <div class="wiki-card__icon" aria-hidden="true">✤</div>
+              <p class="wiki-card__code">AGRICULTURA</p>
+              <h3>Farmer's Delight</h3>
+              <p>Expande agricultura e culinária com novos alimentos, ferramentas, ingredientes e formas de preparar comida.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="FallingTree árvores madeira mineração">
+              <div class="wiki-card__icon" aria-hidden="true">⌇</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>FallingTree</h3>
+              <p>Permite derrubar árvores de forma mais rápida ao quebrar a base do tronco.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="FancyToasts notificações interface">
+              <div class="wiki-card__icon" aria-hidden="true">▤</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>FancyToasts</h3>
+              <p>Melhora a aparência das notificações e avisos exibidos pelo jogo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Fast IP Ping servidor conexão ping">
+              <div class="wiki-card__icon" aria-hidden="true">⌁</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>Fast IP Ping</h3>
+              <p>Agiliza a verificação de servidores e a leitura de informações de conexão.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Faster Iris Shadow Mapper Iris shaders sombras desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">◈</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Faster Iris Shadow Mapper</h3>
+              <p>Otimiza o processamento do mapa de sombras usado pelo Iris.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Ferrite Core memória ram otimização">
+              <div class="wiki-card__icon" aria-hidden="true">⬡</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Ferrite Core</h3>
+              <p>Reduz o uso de memória do Minecraft para deixar o modpack mais leve.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Gliders planador voo exploração">
+              <div class="wiki-card__icon" aria-hidden="true">△</div>
+              <p class="wiki-card__code">EXPLORAÇÃO</p>
+              <h3>Gliders</h3>
+              <p>Adiciona planadores para atravessar grandes distâncias pelo mundo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="HennyFullbright fullbright iluminação visão">
+              <div class="wiki-card__icon" aria-hidden="true">☼</div>
+              <p class="wiki-card__code">VISUAL</p>
+              <h3>HennyFullbright</h3>
+              <p>Melhora a visibilidade em áreas escuras sem depender de tochas para enxergar.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Highlighter itens interface destaque">
+              <div class="wiki-card__icon" aria-hidden="true">▰</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Highlighter</h3>
+              <p>Destaca itens e informações relevantes durante pesquisas e interações com interfaces.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="ImmediatelyFast renderização fps desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">↯</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>ImmediatelyFast</h3>
+              <p>Otimiza partes da renderização do Minecraft para melhorar o desempenho gráfico.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Infinite Trading villagers comércio trocas">
+              <div class="wiki-card__icon" aria-hidden="true">↻</div>
+              <p class="wiki-card__code">VILAREJOS</p>
+              <h3>Infinite Trading</h3>
+              <p>Permite realizar trocas com aldeões sem esgotar suas ofertas normalmente.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="InvMove inventário movimento interface">
+              <div class="wiki-card__icon" aria-hidden="true">↔</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>InvMove</h3>
+              <p>Permite continuar movimentando o personagem enquanto determinadas interfaces estão abertas.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Inventory HUD inventário HUD interface">
+              <div class="wiki-card__icon" aria-hidden="true">▤</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Inventory HUD+</h3>
+              <p>Mostra informações do inventário e equipamentos diretamente sobre a tela de jogo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Inventory Interactions inventário itens interface">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Inventory Interactions</h3>
+              <p>Adiciona atalhos e interações rápidas para organizar e manipular itens.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Inventory Particles inventário partículas visual">
+              <div class="wiki-card__icon" aria-hidden="true">✦</div>
+              <p class="wiki-card__code">VISUAL</p>
+              <h3>Inventory Particles</h3>
+              <p>Adiciona pequenos efeitos visuais às interações com o inventário.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Inventory Tabs inventário abas interface">
+              <div class="wiki-card__icon" aria-hidden="true">▤</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Inventory Tabs</h3>
+              <p>Facilita a navegação entre diferentes inventários usando abas.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Iris shaders gráficos renderização">
+              <div class="wiki-card__icon" aria-hidden="true">◉</div>
+              <p class="wiki-card__code">VISUAL</p>
+              <h3>Iris</h3>
+              <p>Adiciona suporte a shaders para alterar iluminação, sombras e aparência do mundo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Iron Chests baús armazenamento">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">ARMAZENAMENTO</p>
+              <h3>Iron Chests</h3>
+              <p>Adiciona baús maiores para aumentar a capacidade de armazenamento.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Jade informações blocos entidades interface">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Jade</h3>
+              <p>Mostra informações sobre blocos e entidades quando o jogador aponta para eles.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Just Enough Items JEI itens receitas crafting">
+              <div class="wiki-card__icon" aria-hidden="true">▤</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Just Enough Items</h3>
+              <p>Permite consultar itens, receitas e usos diretamente dentro do jogo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="KryptonFoxified rede networking desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">⌁</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>KryptonFoxified</h3>
+              <p>Otimiza partes da comunicação de rede para reduzir custos de processamento.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="LambDynamicLights iluminação luz">
+              <div class="wiki-card__icon" aria-hidden="true">☼</div>
+              <p class="wiki-card__code">VISUAL</p>
+              <h3>LambDynamicLights</h3>
+              <p>Faz fontes de luz carregadas pelo jogador iluminarem o ambiente dinamicamente.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Leaves Be Gone folhas árvores limpeza mundo">
+              <div class="wiki-card__icon" aria-hidden="true">⌇</div>
+              <p class="wiki-card__code">MUNDO</p>
+              <h3>Leaves Be Gone</h3>
+              <p>Remove folhas deixadas para trás por árvores derrubadas, mantendo o ambiente mais limpo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Lithium otimização lógica servidor desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">↯</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Lithium</h3>
+              <p>Otimiza diversos sistemas internos do Minecraft para melhorar desempenho sem alterar a jogabilidade.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Lootr loot baús estruturas multiplayer">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">EXPLORAÇÃO</p>
+              <h3>Lootr</h3>
+              <p>Faz com que determinados baús de estruturas tenham loot individual para cada jogador.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Mine Frame Gen frames desempenho fps">
+              <div class="wiki-card__icon" aria-hidden="true">▥</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Mine Frame Gen</h3>
+              <p>Ferramenta voltada à geração e estabilidade de frames para melhorar a fluidez do jogo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Modern Industrialization MI indústria máquinas energia produção">
+              <div class="wiki-card__icon" aria-hidden="true">⚙</div>
+              <p class="wiki-card__code">INDÚSTRIA</p>
+              <h3>Modern Industrialization</h3>
+              <p>Adiciona uma cadeia industrial completa com máquinas, energia, processamento e automação em escala.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="ModernFix otimização memória carregamento desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">⌁</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>ModernFix</h3>
+              <p>Corrige problemas e otimiza carregamento, memória e desempenho de modpacks grandes.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="More Culling culling renderização fps desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">◌</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>More Culling</h3>
+              <p>Evita renderizações desnecessárias para reduzir o trabalho da GPU.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Mouse Tweaks mouse inventário interface">
+              <div class="wiki-card__icon" aria-hidden="true">⌁</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Mouse Tweaks</h3>
+              <p>Adiciona atalhos e melhorias para movimentar itens dentro dos inventários.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Neat health bar vida entidades mobs">
+              <div class="wiki-card__icon" aria-hidden="true">▰</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Neat</h3>
+              <p>Exibe barras de vida e informações básicas sobre criaturas acima delas.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Nemo's Inventory Sorting inventário organização ordenar">
+              <div class="wiki-card__icon" aria-hidden="true">☷</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Nemo's Inventory Sorting</h3>
+              <p>Adiciona ferramentas rápidas para organizar e ordenar inventários.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Not Enough Crashes crash erros relatório">
+              <div class="wiki-card__icon" aria-hidden="true">!</div>
+              <p class="wiki-card__code">UTILIDADE</p>
+              <h3>Not Enough Crashes</h3>
+              <p>Melhora a tela exibida quando o jogo encontra um erro, facilitando a identificação do problema.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Obscure Tooltips tooltip itens interface">
+              <div class="wiki-card__icon" aria-hidden="true">?</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Obscure Tooltips</h3>
+              <p>Adiciona melhorias e informações extras aos tooltips de itens.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Ore Harvester minérios mineração coleta">
+              <div class="wiki-card__icon" aria-hidden="true">⬡</div>
+              <p class="wiki-card__code">MINERAÇÃO</p>
+              <h3>Ore Harvester</h3>
+              <p>Facilita a coleta de veios de minério ao quebrar uma parte da formação.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Perspective Nametag nametag jogador nome interface">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>Perspective Nametag</h3>
+              <p>Melhora a exibição dos nomes dos jogadores de acordo com a perspectiva da câmera.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="ProjectE EMC transmutação recursos">
+              <div class="wiki-card__icon" aria-hidden="true">◆</div>
+              <p class="wiki-card__code">RECURSOS</p>
+              <h3>ProjectE</h3>
+              <p>Adiciona o sistema EMC para converter itens e recursos dentro de uma progressão própria.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Realistic Nametag nome jogador multiplayer">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>Realistic Nametag</h3>
+              <p>Altera a apresentação dos nomes dos jogadores para uma identificação mais natural no mundo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Reese's Sodium Options Sodium configurações vídeo">
+              <div class="wiki-card__icon" aria-hidden="true">⚙</div>
+              <p class="wiki-card__code">INTERFACE</p>
+              <h3>Reese's Sodium Options</h3>
+              <p>Melhora a organização e a navegação das configurações gráficas do Sodium.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Ribbits sapos criaturas mobs mundo">
+              <div class="wiki-card__icon" aria-hidden="true">◉</div>
+              <p class="wiki-card__code">CRIATURAS</p>
+              <h3>Ribbits</h3>
+              <p>Adiciona novos sapos e elementos relacionados para enriquecer o ambiente.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="ScalableLux iluminação luz otimização desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">☼</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>ScalableLux</h3>
+              <p>Otimiza o sistema de iluminação para reduzir o custo de processamento em mundos grandes.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Simple Teams equipes times multiplayer">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>Simple Teams</h3>
+              <p>Permite criar equipes de jogadores e organizar grupos dentro do servidor.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Simple Voice Chat voz comunicação multiplayer">
+              <div class="wiki-card__icon" aria-hidden="true">◌</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>Simple Voice Chat</h3>
+              <p>Adiciona comunicação por voz entre os jogadores diretamente dentro do Minecraft.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Sodium fps renderização desempenho gráficos">
+              <div class="wiki-card__icon" aria-hidden="true">↯</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Sodium</h3>
+              <p>Reescreve partes importantes da renderização para aumentar o desempenho gráfico.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Sodium Extra configurações Sodium desempenho">
+              <div class="wiki-card__icon" aria-hidden="true">⚙</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Sodium Extra</h3>
+              <p>Adiciona mais opções de configuração e controle ao sistema gráfico do Sodium.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Solar Industrialization energia solar indústria">
+              <div class="wiki-card__icon" aria-hidden="true">☼</div>
+              <p class="wiki-card__code">INDÚSTRIA</p>
+              <h3>Solar Industrialization</h3>
+              <p>Adiciona geração de energia solar para complementar as cadeias industriais do modpack.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Sophisticated Backpacks mochilas armazenamento inventário">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">ARMAZENAMENTO</p>
+              <h3>Sophisticated Backpacks</h3>
+              <p>Adiciona mochilas expansíveis com melhorias para armazenamento, organização e transporte.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Sound Physics Remastered áudio som física">
+              <div class="wiki-card__icon" aria-hidden="true">◌</div>
+              <p class="wiki-card__code">ÁUDIO</p>
+              <h3>Sound Physics Remastered</h3>
+              <p>Adiciona efeitos de acústica e reverberação para tornar os sons do mundo mais naturais.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Sounds sons áudio ambientação">
+              <div class="wiki-card__icon" aria-hidden="true">♫</div>
+              <p class="wiki-card__code">ÁUDIO</p>
+              <h3>Sounds</h3>
+              <p>Amplia a experiência sonora do jogo com novos sons e elementos de ambientação.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Stable FPS fps desempenho estabilidade">
+              <div class="wiki-card__icon" aria-hidden="true">↯</div>
+              <p class="wiki-card__code">OTIMIZAÇÃO</p>
+              <h3>Stable FPS</h3>
+              <p>Busca melhorar a estabilidade da taxa de quadros e reduzir oscilações de desempenho.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Talk Balloons chat mensagens jogadores">
+              <div class="wiki-card__icon" aria-hidden="true">◌</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>Talk Balloons</h3>
+              <p>Exibe as mensagens do chat próximas aos jogadores que estão falando.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="The Twilight Forest Twilight Forest dimensão exploração bosses">
+              <div class="wiki-card__icon" aria-hidden="true">◈</div>
+              <p class="wiki-card__code">DIMENSÃO</p>
+              <h3>The Twilight Forest</h3>
+              <p>Adiciona uma dimensão própria com biomas, estruturas, criaturas e desafios para explorar.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Tom's Simple Storage Mod armazenamento itens terminal">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">ARMAZENAMENTO</p>
+              <h3>Tom's Simple Storage Mod</h3>
+              <p>Cria uma rede simples para acessar e organizar itens de vários inventários em um único sistema.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Trade Cycling trocas aldeões comércio">
+              <div class="wiki-card__icon" aria-hidden="true">↻</div>
+              <p class="wiki-card__code">VILAREJOS</p>
+              <h3>Trade Cycling</h3>
+              <p>Facilita a troca de profissões dos aldeões para encontrar ofertas diferentes.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Traveler's Titles exploração biomas títulos">
+              <div class="wiki-card__icon" aria-hidden="true">⌂</div>
+              <p class="wiki-card__code">EXPLORAÇÃO</p>
+              <h3>Traveler's Titles</h3>
+              <p>Exibe títulos quando o jogador entra em diferentes biomas e regiões do mundo.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Villager Inventory aldeão inventário comércio">
+              <div class="wiki-card__icon" aria-hidden="true">▣</div>
+              <p class="wiki-card__code">VILAREJOS</p>
+              <h3>Villager Inventory</h3>
+              <p>Permite visualizar informações internas dos inventários e profissões dos aldeões.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Waystones waystone teleporte viagem">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">EXPLORAÇÃO</p>
+              <h3>Waystones</h3>
+              <p>Adiciona pontos de teleporte para facilitar viagens entre bases e locais importantes.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Waystones Teleport Pets pets animais teleporte">
+              <div class="wiki-card__icon" aria-hidden="true">◇</div>
+              <p class="wiki-card__code">EXPLORAÇÃO</p>
+              <h3>Waystones Teleport Pets</h3>
+              <p>Permite transportar animais junto com o jogador ao utilizar sistemas de teleporte.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Waystones2Waypoints2 waystones waypoints mapa">
+              <div class="wiki-card__icon" aria-hidden="true">⌖</div>
+              <p class="wiki-card__code">EXPLORAÇÃO</p>
+              <h3>Waystones2Waypoints2</h3>
+              <p>Integra pontos de Waystones com sistemas de waypoints para facilitar a navegação.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Xaero's Minimap minimapa mapa waypoints">
+              <div class="wiki-card__icon" aria-hidden="true">⌖</div>
+              <p class="wiki-card__code">MAPA</p>
+              <h3>Xaero's Minimap</h3>
+              <p>Adiciona um minimapa com informações do terreno, entidades e pontos marcados.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="Xaero's World Map mapa mundo waypoints">
+              <div class="wiki-card__icon" aria-hidden="true">◎</div>
+              <p class="wiki-card__code">MAPA</p>
+              <h3>Xaero's World Map</h3>
+              <p>Adiciona um mapa completo do mundo para navegação e marcação de locais importantes.</p>
+          </article>
+      
+          <article class="wiki-card reveal" data-keys="is Typing typing chat jogadores mensagens">
+              <div class="wiki-card__icon" aria-hidden="true">...</div>
+              <p class="wiki-card__code">MULTIPLAYER</p>
+              <h3>is Typing</h3>
+              <p>Mostra quando outro jogador está digitando uma mensagem no chat.</p>
+          </article>
+        </div>
+
+        <div class="wiki-more-wrap" id="wiki-more-wrap">
+          <button
+            type="button"
+            class="wiki-more"
+            id="wiki-more"
+            aria-expanded="false"
+          >
+         
+          </button>
+        </div>
+  
+        <p class="wiki-empty" id="wiki-empty" hidden>
+          Nenhuma ficha encontrada neste gaveteiro.
+        </p>
+  
+      </div>
+    </section>
+
+    <!-- PLAYERS -->
+    <section class="section players" id="players" data-section="players" aria-labelledby="players-title">
+      <div class="section__inner">
+        <header class="section-head reveal">
+          <p class="stamp">SERVER REGISTRY · BOOK 02</p>
+          <h2 id="players-title">ASMP // PLAYER REGISTRY</h2>
+          <p>Registro da whitelist do Servidor — Lista com todos os jogadores.</p>
+        </header>
+
+        <div class="player-list"></div>
+
+    <!-- DOWNLOAD -->
+    <section class="section download" id="download" data-section="download" aria-labelledby="download-title">
+      <div class="section__inner">
+        <header class="section-head reveal">
+          <p class="stamp">DISTRIBUTION TERMINAL · BAY 01</p>
+          <h2 id="download-title">ASMP // DISTRIBUTION</h2>
+          <p>Terminal de entrega do modpack.</p>
+        </header>
+
+        <div class="distro reveal">
+          <div class="distro__main">
+            <p class="distro__label">PACOTE</p>
+            <h3><!-- EDIT -->NeoASMP Modpack V6</h3>
+            <dl class="distro__specs">
+              <div><dt>Versão atual</dt><dd><!-- EDIT -->6.2.0</dd></div>
+              <div><dt>Minecraft</dt><dd><!-- EDIT -->1.21.1</dd></div>
+              <div><dt>Mod loader</dt><dd><!-- EDIT -->NeoForge 21.1.248</dd></div>
+              <div><dt>Java</dt><dd><!-- EDIT -->Java 21</dd></div>
+            </dl>
+            <a class="btn btn--primary btn--download"
+            href="https://github.com/Luis2wa/ASMP-website/releases/download/v6.2.0/NeoASMP.zip">
+           Baixar modpack
+         </a>
+
+          <aside class="distro__req">
+            <h3>Requisitos</h3>
+            <ul>
+              <li>Minecraft Java Edition 1.21.1</li>
+              <li>NeoForge 21.1.248</li>
+              <li>Java 21 (64-bit)</li>
+              <li>4 GB de RAM alocados</li>
+              <li>Placa de vídeo com suporte a OpenGL 4.6</li>
+              <li>Espaço livre para os arquivos</li>
+              <li>Conexão estável com a internet</li>
+            </ul>
+            <p class="distro__note">SERIAL DIST-0.3.0 · HASH PENDENTE</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="section__inner footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo.png" alt="" width="56" height="56">
+        <div>
+          <strong>ASMP</strong>
+          <p>Industrial Archive</p>
+        </div>
+      </div>
+      <div class="footer__meta">
+        <p>Versão atual · <!-- EDIT -->6.2.0</p>
+        <p>Minecraft Server · Powered by EnxadaHost</p>
+        <p>IP · <!-- EDIT -->enx-cirion-98.enx.host:10447</p>
+      </div>
+      <div class="footer__gears" aria-hidden="true">
+        <span class="gear gear--sm"></span>
+        <span class="gear gear--sm gear--ccw"></span>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> ASMP. Arquivo industrial do servidor. Todos os registros pertencem ao projeto.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
